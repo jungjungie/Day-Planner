@@ -4,31 +4,40 @@ body {
   line-height: 1;
 }
 
-/* textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-} */
-
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: #4c4c4c;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #4c4c4c;
+  position: relative;
 }
 
-/* .description{
-  white-space: pre-wrap;
-} */
+.display-3 {
+  text-shadow: 2px 3px 5px #4c4c4c;
+}
 
-/* .time-block{
-  text-align: center;
-  border-radius: 15px;
-} */
+#description {
+  font-family: 'League Script', cursive;
+  font-weight: 700;
+  font-size: 40px;
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  color: #06AED5;
+  z-index: -1;
+}
+
+#currentDay {
+  color: #ff5349;
+  background: #FFE5E4;
+  border-top: 1px solid #ff5349;
+  border-bottom: 1px solid #ff5349;
+  line-height: 2em;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
 
 .row {
   white-space: pre-wrap;
@@ -37,29 +46,19 @@ body {
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  color: #4c4c4c;
+  border-top: 1px dashed #d8d8d8;
+  background: white;
+  padding-top: 10px;
 }
 
-.event {
-  background: #e5e5e5;
-  /* border: white; */
+textarea{
+  background: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  resize: none;
+  color: #4c4c4c;
+  padding: 10px;
 }
-
-.save {
-  background: #1dacd6;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.saveicon {
-  color: white;
-}
-
-/* .saveicon {
-  padding: 30px 0;
-} */
 
 /* .past {
   background-color: #d3d3d3;
@@ -76,15 +75,23 @@ body {
   color: white;
 } */
 
-/* .saveBtn {
-  border-left: 1px solid black;
+.saveBtn {
+  border: 1px solid #e5e5e5;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-} */
+}
 
-/* .saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-} */
+}
+
+.saveBtn:focus {
+  outline: none;
+}
+
+i {
+  padding-bottom: 10px;
+}
