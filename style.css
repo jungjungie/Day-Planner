@@ -22,7 +22,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   position: absolute;
-  top: 130px;
+  top: 140px;
   width: 100%;
   color: #06AED5;
   z-index: -1;
@@ -36,7 +36,7 @@ body {
   line-height: 2em;
   width: 300px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .row {
