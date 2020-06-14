@@ -85,6 +85,9 @@ i {
 
 /* For iPad */
 @media (max-width: 800px) {
+  #description {
+    font-size: 30px;
+  }
   #currentDay {
     margin-top: 80px;
   }
@@ -98,13 +101,13 @@ i {
   }
 
   #description {
-    font-weight: 700;
     font-size: 20px;
     top: 77px;
   }
 
   #currentDay {
     line-height: 1.5em;
+    margin-top: 50px;
   }
 
   .row {
