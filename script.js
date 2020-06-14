@@ -5,7 +5,7 @@ var timeArr = $(".time");
 var eventBlockArr = $("textarea");
 var saveBtnArr = $(".saveBtn");
 // var pastTimeArr = [];
-// var storedItems = [];
+var storedItems = [];
 
 // Sets current date at top of page
 $("#currentDay").text(today);
@@ -25,15 +25,28 @@ $(".saveBtn").on("click", function () {
     var clickedTime = timeArr[clickedIndex].textContent;
 
     // Saved items go to localStorage
-    var storedItems = JSON.parse(localStorage.getItem("key")) || [];
-    storedItems.push([{Time: clickedTime, Event: clickedEvent}]);
+    storedItems = JSON.parse(localStorage.getItem("key")) || [];
+    storedItems.push({Time: clickedTime, Event: clickedEvent});
     storedItems = JSON.stringify(storedItems);
-
     localStorage.setItem("key", storedItems);
-
 })
-    
-    // Save items are retrived from localstorage and displayed on screen
+
+function viewSavedPlans() {
+    // Grabs saved items from localStorage
+    storedItems = JSON.parse(localStorage.getItem("key"));
+    console.log(storedItems);
+    console.log(storedItems[0].Time);
+
+    // If saved item key (Time) = a time slot in timeArr, event gets populated into that event slot
+    for (var i=0; i < storedItems.length; i++) {
+        for (var j=0; j < timeArr.length; j++) {
+            if (storedItems[i].Time == timeArr[j].textContent) {
+                eventBlockArr[j].textContent = storedItems[i].Event;
+            }
+        }
+    }
+}
+viewSavedPlans();
 
 // past time events are left gray
 
@@ -84,4 +97,4 @@ for (var i=0; i < timeArr.length; i++) {
     }
 }
 
-// DON'T DELETE LINE 61
+// DON'T DELETE LINE 53
