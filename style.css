@@ -13,7 +13,8 @@ body {
   position: relative;
 }
 
-.display-3 {
+h1 {
+  font-size: 4.4em;
   text-shadow: 2px 3px 5px #4c4c4c;
 }
 
@@ -75,9 +76,42 @@ textarea{
 
 .saveBtn:focus {
   outline: none;
-  
 }
 
 i {
   padding-bottom: 10px;
+}
+
+
+/* For iPad */
+@media (max-width: 800px) {
+  #currentDay {
+    margin-top: 80px;
+  }
+}
+
+
+/* For mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  #description {
+    font-weight: 700;
+    font-size: 20px;
+    top: 77px;
+  }
+
+  #currentDay {
+    line-height: 1.5em;
+  }
+
+  .row {
+    white-space: normal;
+  }
+
+  i {
+    padding-bottom: 0px;
+  }
 }
