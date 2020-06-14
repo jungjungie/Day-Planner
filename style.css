@@ -53,7 +53,7 @@ body {
 }
 
 textarea{
-  background: #daf0ff;
+  /* background: #b5e2ff; */
   border: 1px solid white;
   resize: none;
   color: #4c4c4c;
@@ -75,6 +75,7 @@ textarea{
 
 .saveBtn:focus {
   outline: none;
+  
 }
 
 i {
