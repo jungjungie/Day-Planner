@@ -1,10 +1,8 @@
 var today = moment().format('dddd, MMMM Do');
-// var currentTime = moment().format('LT');
 var currentTime = moment().hour();
 var timeArr = $(".time");
 var eventBlockArr = $("textarea");
 var saveBtnArr = $(".saveBtn");
-// var pastTimeArr = [];
 var storedItems = [];
 
 // Sets current date at top of page
@@ -12,7 +10,6 @@ $("#currentDay").text(today);
 
 // Series of events when save button is clicked
 $(".saveBtn").on("click", function () {
-    // console.log(event); 
 
     // Grabs index of save button that was clicked
     var clickedIndex = saveBtnArr.index($(this));
@@ -34,8 +31,6 @@ $(".saveBtn").on("click", function () {
 function viewSavedPlans() {
     // Grabs saved items from localStorage
     storedItems = JSON.parse(localStorage.getItem("key")) || [];
-    console.log(storedItems);
-    // console.log(storedItems[0].Time);
 
     // If saved item key (Time) = a time slot in timeArr, event gets populated into that event slot
     for (var i=0; i < storedItems.length; i++) {
@@ -54,11 +49,10 @@ for (var i=0; i < timeArr.length; i++) {
     const hr = i + 9;
 
     var timeblock = timeArr[i].textContent;
-    //timeblock = moment(timeblock, 'h A');
-    //console.log(timeblock);
-    console.log(`hour: ${hr} timeblock: ${timeblock}`)
+    console.log(`hour: ${hr} timeblock: ${timeblock}`);
+
+    // Current time block is red
     if (hr == currentTime) {
-        // Current time block is red
         eventBlockArr.eq(i).css({"background": "#FFE5E4", "color": "#ff5349", "border-top": "2px solid #ff5349", "border-bottom": "2px solid #ff5349"});
         eventBlockArr.eq(i).addClass("lead");
     } 

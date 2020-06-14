@@ -10,7 +10,6 @@ body {
   color: #4c4c4c;
   border-radius: 0;
   border-bottom: 10px solid #4c4c4c;
-  position: relative;
 }
 
 h1 {
@@ -22,8 +21,8 @@ h1 {
   font-family: 'League Script', cursive;
   font-weight: 700;
   font-size: 40px;
-  position: absolute;
-  top: 140px;
+  position: relative;
+  top: -15px;
   width: 100%;
   color: #06AED5;
   z-index: -1;
@@ -37,7 +36,7 @@ h1 {
   line-height: 2em;
   width: 300px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .row {
@@ -88,9 +87,6 @@ i {
   #description {
     font-size: 30px;
   }
-  #currentDay {
-    margin-top: 80px;
-  }
 }
 
 
@@ -102,12 +98,10 @@ i {
 
   #description {
     font-size: 20px;
-    top: 77px;
   }
 
   #currentDay {
     line-height: 1.5em;
-    margin-top: 50px;
   }
 
   .row {
