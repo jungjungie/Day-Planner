@@ -46,7 +46,7 @@ viewSavedPlans();
 // Time block colors
 for (var i=0; i < timeArr.length; i++) {
 
-    const hr = i + 9;
+    const hr = i + 8;
 
     var timeblock = timeArr[i].textContent;
     console.log(`hour: ${hr} timeblock: ${timeblock}`);
